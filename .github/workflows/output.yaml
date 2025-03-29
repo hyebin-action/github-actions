@@ -19,6 +19,6 @@ jobs:
     needs: [create-output]
     runs-on: ubuntu-latest
     steps:
-      - name: echo output
+      - name: get output
         run: |
           echo "test=${{ needs.create-output.outputs.test }}"
