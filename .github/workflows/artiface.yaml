@@ -1,4 +1,4 @@
-name: artiface
+name: artifact
 on: push
 
 jobs:
