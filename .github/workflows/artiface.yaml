@@ -1,0 +1,14 @@
+name: artiface
+on: push
+
+jobs:
+  upload-artiface:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: echo hello-world > hello.txt
+      - name: upload artiface
+        uses: actions/uploacd-artifact@v3
+        with:
+          name: artifact-test
+          path: ./hello.txt
