@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: echo
         run: echo hello-world > hello.txt
-      - name: upload artiface
+      - name: upload artifact
         uses: actions/upload-artifact@v3
         with:
           name: artifact-test
