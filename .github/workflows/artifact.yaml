@@ -2,7 +2,7 @@ name: artifact
 on: push
 
 jobs:
-  upload-artiface:
+  upload-artifact:
     runs-on: ubuntu-latest
     steps:
       - name: echo
