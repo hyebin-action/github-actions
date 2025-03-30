@@ -31,6 +31,10 @@ jobs:
     if: needs.get-keyword.outputs.level != 'Undefined'
     runs-on: ubuntu-latest
     environment: ${{ needs.get-keyword.outputs.level }}
+    # environment: ${{ needs.get-keyword.outputs.level }}
+    strategy:
+      matrix:
+        environment: ['${{ needs.get-keyword.outputs.level }}']
     steps:
       - name: slack
         uses: slackapi/slack-github-action@v2.0.0
