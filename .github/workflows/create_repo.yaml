@@ -39,7 +39,7 @@ jobs:
                   "color": "#28a745",
                   "fields": [
                     {
-                      "title": "cfeate repo result ${{ steps.create-repo.outcome }}",
+                      "title": "create repo result ${{ steps.create-repo.outcome }}",
                       "short": true,
                       "value": "${{ inputs.prefix }}-${{ inputs.name }}"
                     }
@@ -47,6 +47,6 @@ jobs:
                 }
               ]
             }
-          env:
-            SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-            SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
