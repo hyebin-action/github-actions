@@ -59,7 +59,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        environment: ['${{ steps.set-envitonment.outputs.environment }}']
+        environment: ['${{ needs.set-envitonment.outputs.environment }}']
     environment: ${{ matrix.environment }}
     steps:
       - name: checkout the code
@@ -88,7 +88,7 @@ jobs:
       contents: read
     strategy:
       matrix:
-        environment: ['${{ steps.set-environment.outputs.environment }}']
+        environment: ['${{ needs.set-environment.outputs.environment }}']
     environment: ${{ matrix.environment }}
     steps:
       - name: checkout the code
