@@ -167,7 +167,7 @@ jobs:
 
   approve:
     if: needs.set-environment.outputs.environment == 'staging'
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     environment: approve-process
     needs: [set-environment, deploy]
     steps:
